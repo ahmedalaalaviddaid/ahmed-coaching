@@ -67,10 +67,10 @@ export default function Navbar() {
 
             <h1 className="text-3xl font-black tracking-widest uppercase">
               AHMED
-              <span className="text-orange-500"> ALAA</span>
+              <span className="text-[#D4AF37]"> ALAA</span>
             </h1>
 
-            <p className="text-orange-500 text-sm tracking-[4px] font-semibold">
+            <p className="text-[#D4AF37] text-sm tracking-[4px] font-semibold">
               ONLINE COACHING
             </p>
 
@@ -85,7 +85,7 @@ export default function Navbar() {
             className="
               lg:hidden
               text-white
-              hover:text-orange-500
+              hover:text-[#D4AF37]
             "
           >
             <Menu size={32}/>
@@ -106,22 +106,22 @@ export default function Navbar() {
             "
           >
 
-            <a href="#home" className="hover:text-orange-500">
+            <a href="#home" className="hover:text-[#D4AF37]">
               Home
             </a>
 
-            <a href="#about" className="hover:text-orange-500">
+            <a href="#about" className="hover:text-[#D4AF37]">
               About
             </a>
 
-            <a href="#coaching" className="hover:text-orange-500">
+            <a href="#coaching" className="hover:text-[#D4AF37]">
               Coaching
             </a>
 
             <a
               href="https://wa.me/201068328134"
               target="_blank"
-              className="hover:text-orange-500"
+              className="hover:text-[#D4AF37]"
             >
               Contact
             </a>
@@ -135,7 +135,7 @@ export default function Navbar() {
             className="
               hidden
               lg:flex
-              bg-orange-500
+              bg-[#D4AF37]
               text-black
               px-8
               py-3
@@ -221,7 +221,7 @@ export default function Navbar() {
             <a
               href="#join"
               className="
-                bg-orange-500
+                bg-[#D4AF37]
                 text-black
                 text-center
                 py-3
