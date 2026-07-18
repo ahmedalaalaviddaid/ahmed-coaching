@@ -17,7 +17,7 @@ export default function Plans() {
     },
 
     {
-      name: "3 MONTHS",
+      name: "4 MONTHS",
       duration: "3 Months Coaching",
       price: "1000 EGP",
       popular: true,
@@ -56,13 +56,13 @@ export default function Plans() {
 
         <div className="text-center mb-16">
 
-          <p className="text-orange-500 tracking-[5px] font-bold uppercase">
+          <p className="text-[#D4AF37] tracking-[5px] font-bold uppercase">
             Coaching Plans
           </p>
 
           <h2 className="text-5xl md:text-6xl font-black mt-5 uppercase">
             Choose Your
-            <span className="text-orange-500">
+            <span className="text-[#D4AF37]">
               {" "}Plan
             </span>
           </h2>
@@ -89,15 +89,18 @@ export default function Plans() {
               viewport={{ once: true }}
 
               className={`
+
                 relative
                 rounded-3xl
                 p-8
                 border
+
                 ${
                   plan.popular
-                    ? "bg-orange-500 text-black border-orange-500 scale-105"
+                    ? "bg-[#D4AF37] text-black border-[#D4AF37] scale-105"
                     : "bg-zinc-900 border-zinc-800"
                 }
+
               `}
             >
 
@@ -111,7 +114,7 @@ export default function Plans() {
                     left-1/2
                     -translate-x-1/2
                     bg-black
-                    text-orange-500
+                    text-[#D4AF37]
                     px-5
                     py-2
                     rounded-full
@@ -133,13 +136,16 @@ export default function Plans() {
 
               <p
                 className={`
+
                   mt-3
                   text-sm
+
                   ${
                     plan.popular
                       ? "text-black/70"
                       : "text-gray-400"
                   }
+
                 `}
               >
                 {plan.duration}
@@ -149,14 +155,17 @@ export default function Plans() {
 
               <p
                 className={`
+
                   text-5xl
                   font-black
                   mt-6
+
                   ${
                     plan.popular
                       ? "text-black"
-                      : "text-orange-500"
+                      : "text-[#D4AF37]"
                   }
+
                 `}
               >
                 {plan.price}
@@ -191,6 +200,7 @@ export default function Plans() {
                 href="#join"
 
                 className={`
+
                   block
                   text-center
                   mt-10
@@ -203,8 +213,9 @@ export default function Plans() {
                   ${
                     plan.popular
                       ? "bg-black text-white hover:bg-zinc-800"
-                      : "bg-orange-500 text-black hover:bg-orange-600"
+                      : "bg-[#D4AF37] text-black hover:bg-[#B8962E]"
                   }
+
                 `}
               >
                 Join Now

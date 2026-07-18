@@ -7,7 +7,7 @@ export default function Footer() {
 
         <div>
           <h2 className="text-3xl font-black">
-            AHMED <span className="text-orange-500">ALAA</span>
+            AHMED <span className="text-[#D4AF37]">ALAA</span>
           </h2>
 
           <p className="text-gray-400 mt-2">
@@ -21,28 +21,28 @@ export default function Footer() {
 
           <a
             href="#home"
-            className="hover:text-orange-500 transition"
+            className="hover:text-[#D4AF37] transition"
           >
             Home
           </a>
 
           <a
             href="#about"
-            className="hover:text-orange-500 transition"
+            className="hover:text-[#D4AF37] transition"
           >
             About
           </a>
 
           <a
             href="#coaching"
-            className="hover:text-orange-500 transition"
+            className="hover:text-[#D4AF37] transition"
           >
             Coaching
           </a>
 
           <a
             href="#join"
-            className="hover:text-orange-500 transition"
+            className="hover:text-[#D4AF37] transition"
           >
             Join
           </a>

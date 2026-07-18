@@ -9,7 +9,6 @@ export default function Hero() {
       className="relative h-screen overflow-hidden"
     >
 
-
       {/* Background */}
 
       <motion.img
@@ -29,16 +28,16 @@ export default function Hero() {
           ease: "easeOut"
         }}
 
-      className="
-  absolute
-  inset-0
-  w-full
-  h-full
-  object-cover
-  object-[70%_120%]
-  translate-x-22
-  md:translate-x-36
-"
+        className="
+          absolute
+          inset-0
+          w-full
+          h-full
+          object-cover
+          object-[70%_120%]
+          translate-x-22
+          md:translate-x-36
+        "
       />
 
 
@@ -70,7 +69,9 @@ export default function Hero() {
           to-transparent
         "
       />
-            {/* Content */}
+
+
+      {/* Content */}
 
       <div
         className="
@@ -82,7 +83,6 @@ export default function Hero() {
           pb-20
         "
       >
-
 
         <motion.div
 
@@ -111,7 +111,6 @@ export default function Hero() {
         >
 
 
-
           <h1
             className="
               text-5xl
@@ -127,14 +126,13 @@ export default function Hero() {
 
             <br />
 
-            <span className="text-orange-500">
+            <span className="text-[#D4AF37]">
               BEST
             </span>
 
             {" "}PHYSIQUE
 
           </h1>
-
 
 
 
@@ -162,7 +160,6 @@ export default function Hero() {
 
 
 
-
           <div
             className="
               flex
@@ -176,8 +173,8 @@ export default function Hero() {
             <a
               href="#join"
               className="
-                bg-orange-500
-                hover:bg-orange-600
+                bg-[#D4AF37]
+                hover:bg-[#B8962E]
                 px-8
                 py-4
                 rounded-xl
@@ -185,7 +182,7 @@ export default function Hero() {
                 uppercase
                 transition
                 shadow-lg
-                shadow-orange-500/30
+                shadow-[#D4AF37]/30
               "
             >
               Apply Now
@@ -205,8 +202,8 @@ export default function Hero() {
                 rounded-xl
                 font-bold
                 uppercase
-                hover:border-orange-500
-                hover:text-orange-500
+                hover:border-[#D4AF37]
+                hover:text-[#D4AF37]
                 transition
               "
             >
@@ -221,8 +218,6 @@ export default function Hero() {
 
 
       </div>
-
-
 
 
 
@@ -262,9 +257,7 @@ export default function Hero() {
 
         </div>
 
-
       </div>
-
 
 
     </section>

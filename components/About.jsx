@@ -19,7 +19,7 @@ export default function About() {
           className="max-w-4xl"
         >
 
-          <p className="text-orange-500 tracking-[5px] font-bold mb-5 uppercase">
+          <p className="text-[#D4AF37] tracking-[5px] font-bold mb-5 uppercase">
             About Me
           </p>
 
@@ -30,7 +30,7 @@ export default function About() {
 
             <br />
 
-            <span className="text-orange-500">
+            <span className="text-[#D4AF37]">
               ALAA
             </span>
 
@@ -55,9 +55,9 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-6 mt-14">
 
 
-            <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-orange-500 transition">
+            <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-[#D4AF37] transition">
 
-              <h3 className="text-4xl font-black text-orange-500">
+              <h3 className="text-4xl font-black text-[#D4AF37]">
                 100%
               </h3>
 
@@ -69,9 +69,9 @@ export default function About() {
 
 
 
-            <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-orange-500 transition">
+            <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-[#D4AF37] transition">
 
-              <h3 className="text-4xl font-black text-orange-500">
+              <h3 className="text-4xl font-black text-[#D4AF37]">
                 24/7
               </h3>
 
@@ -83,9 +83,9 @@ export default function About() {
 
 
 
-            <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-orange-500 transition">
+            <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-[#D4AF37] transition">
 
-              <h3 className="text-4xl font-black text-orange-500">
+              <h3 className="text-4xl font-black text-[#D4AF37]">
                 1:1
               </h3>
 
@@ -104,8 +104,8 @@ export default function About() {
             className="
               inline-block
               mt-12
-              bg-orange-500
-              hover:bg-orange-600
+              bg-[#D4AF37]
+              hover:bg-[#B8962E]
               px-10
               py-4
               rounded-xl

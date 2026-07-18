@@ -43,13 +43,13 @@ export default function WhyMe() {
           className="text-center mb-16"
         >
 
-          <p className="text-orange-500 tracking-[5px] font-bold uppercase">
+          <p className="text-[#D4AF37] tracking-[5px] font-bold uppercase">
             Why Choose Me
           </p>
 
           <h2 className="text-5xl md:text-6xl font-black uppercase mt-5">
             Build Your Best
-            <span className="text-orange-500">
+            <span className="text-[#D4AF37]">
               {" "}Physique
             </span>
           </h2>
@@ -75,7 +75,7 @@ export default function WhyMe() {
                 rounded-2xl
                 border
                 border-zinc-800
-                hover:border-orange-500
+                hover:border-[#D4AF37]
                 transition
                 duration-300
                 hover:-translate-y-2

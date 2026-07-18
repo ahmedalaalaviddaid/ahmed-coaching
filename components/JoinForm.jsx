@@ -56,73 +56,65 @@ export default function JoinForm() {
           Fill your information and start your transformation.
         </p>
 
+
         <form
           onSubmit={handleSubmit}
           className="mt-12 space-y-7"
         >
 
-          {/* Name */}
-          <div>
-            <label className="block mb-2 text-gray-300 font-bold">
-              Full Name
-            </label>
+          {[
+            ["Full Name","text","name"],
+            ["Age","number","age"],
+            ["Height (cm)","number","height"],
+            ["Weight (kg)","number","weight"],
+            ["Phone Number","text","phone"],
+          ].map((item,index)=>(
+            <div key={index}>
+              <label className="block mb-2 text-gray-300 font-bold">
+                {item[0]}
+              </label>
 
-            <input
-              placeholder="Enter your name"
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
-              onChange={(e)=>setForm({...form,name:e.target.value})}
-            />
-          </div>
+              <input
+                type={item[1]}
+                placeholder={`Enter your ${item[0].toLowerCase()}`}
+                className="
+                  w-full
+                  p-4
+                  rounded-xl
+                  bg-zinc-900
+                  border
+                  border-zinc-800
+                  focus:border-[#D4AF37]
+                  outline-none
+                "
+                onChange={(e)=>
+                  setForm({
+                    ...form,
+                    [item[2]]:e.target.value
+                  })
+                }
+              />
+            </div>
+          ))}
 
-          {/* Age */}
-          <div>
-            <label className="block mb-2 text-gray-300 font-bold">
-              Age
-            </label>
 
-            <input
-              type="number"
-              placeholder="Enter your age"
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
-              onChange={(e)=>setForm({...form,age:e.target.value})}
-            />
-          </div>
 
-          {/* Height */}
-          <div>
-            <label className="block mb-2 text-gray-300 font-bold">
-              Height (cm)
-            </label>
-
-            <input
-              type="number"
-              placeholder="Enter your height"
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
-              onChange={(e)=>setForm({...form,height:e.target.value})}
-            />
-          </div>
-
-          {/* Weight */}
-          <div>
-            <label className="block mb-2 text-gray-300 font-bold">
-              Weight (kg)
-            </label>
-
-            <input
-              type="number"
-              placeholder="Enter your weight"
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
-              onChange={(e)=>setForm({...form,weight:e.target.value})}
-            />
-          </div>
-                    {/* Gender */}
           <div>
             <label className="block mb-2 text-gray-300 font-bold">
               Gender
             </label>
 
             <select
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
+              className="
+                w-full
+                p-4
+                rounded-xl
+                bg-zinc-900
+                border
+                border-zinc-800
+                focus:border-[#D4AF37]
+                outline-none
+              "
               onChange={(e)=>setForm({...form,gender:e.target.value})}
             >
               <option>Select Gender</option>
@@ -131,44 +123,52 @@ export default function JoinForm() {
             </select>
           </div>
 
-          {/* Phone */}
-          <div>
-            <label className="block mb-2 text-gray-300 font-bold">
-              Phone Number
-            </label>
 
-            <input
-              placeholder="Enter your phone number"
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
-              onChange={(e)=>setForm({...form,phone:e.target.value})}
-            />
-          </div>
 
-          {/* Plan */}
           <div>
             <label className="block mb-2 text-gray-300 font-bold">
               Choose Your Plan
             </label>
 
             <select
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
+              className="
+                w-full
+                p-4
+                rounded-xl
+                bg-zinc-900
+                border
+                border-zinc-800
+                focus:border-[#D4AF37]
+                outline-none
+              "
               onChange={(e)=>setForm({...form,plan:e.target.value})}
             >
               <option>Select Plan</option>
-              <option>1 Month - 500 EGP</option>
-              <option>3 Months - 1200 EGP</option>
-              <option>6 Months - 2500 EGP</option>
+              <option>1 Month - 300 EGP</option>
+              <option>4 Months - 1000 EGP</option>
+              <option>6 Months - 1500 EGP</option>
             </select>
           </div>
 
-          {/* Experience */}
+
+
+
           <div>
             <label className="block mb-2 text-gray-300 font-bold">
               Training Experience
             </label>
 
             <select
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
+              className="
+                w-full
+                p-4
+                rounded-xl
+                bg-zinc-900
+                border
+                border-zinc-800
+                focus:border-[#D4AF37]
+                outline-none
+              "
               onChange={(e)=>setForm({...form,experience:e.target.value})}
             >
               <option>Select Experience</option>
@@ -178,14 +178,25 @@ export default function JoinForm() {
             </select>
           </div>
 
-          {/* Training Days */}
+
+
+
           <div>
             <label className="block mb-2 text-gray-300 font-bold">
               Training Days Per Week
             </label>
 
             <select
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
+              className="
+                w-full
+                p-4
+                rounded-xl
+                bg-zinc-900
+                border
+                border-zinc-800
+                focus:border-[#D4AF37]
+                outline-none
+              "
               onChange={(e)=>setForm({...form,trainingDays:e.target.value})}
             >
               <option>Select Days</option>
@@ -198,14 +209,26 @@ export default function JoinForm() {
             </select>
           </div>
 
-          {/* Goal */}
+
+
+
+
           <div>
             <label className="block mb-2 text-gray-300 font-bold">
               Your Goal
             </label>
 
             <select
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
+              className="
+                w-full
+                p-4
+                rounded-xl
+                bg-zinc-900
+                border
+                border-zinc-800
+                focus:border-[#D4AF37]
+                outline-none
+              "
               onChange={(e)=>setForm({...form,goal:e.target.value})}
             >
               <option>Select Your Goal</option>
@@ -219,23 +242,28 @@ export default function JoinForm() {
               <option>🎯 Other</option>
             </select>
           </div>
-                    <button
+
+
+
+
+          <button
             type="submit"
             className="
               w-full
-              bg-orange-500
-              hover:bg-orange-600
+              bg-[#D4AF37]
+              hover:bg-[#B8962E]
               py-4
               rounded-xl
               font-bold
               text-lg
               transition
               shadow-lg
-              shadow-orange-500/20
+              shadow-[#D4AF37]/20
             "
           >
             SUBMIT APPLICATION
           </button>
+
 
         </form>
 
