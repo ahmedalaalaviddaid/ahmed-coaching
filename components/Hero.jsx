@@ -35,7 +35,7 @@ export default function Hero() {
   w-full
   h-full
   object-cover
-  object-[70%_90%]
+  object-[70%_100%]
   translate-x-22
   md:translate-x-36
 "
