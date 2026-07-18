@@ -29,14 +29,15 @@ export default function Hero() {
           ease: "easeOut"
         }}
 
-        className="
+      className="
   absolute
   inset-0
   w-full
   h-full
   object-cover
-  object-[85%_center]
-  translate-x-74
+  object-[70%_center]
+  translate-x-40
+  md:translate-x-36
 "
       />
 
