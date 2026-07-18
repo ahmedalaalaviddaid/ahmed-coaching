@@ -35,8 +35,8 @@ export default function Hero() {
   w-full
   h-full
   object-cover
-  object-[75%_center]
-  translate-x-36
+  object-[85%_center]
+  translate-x-44
 "
       />
 
