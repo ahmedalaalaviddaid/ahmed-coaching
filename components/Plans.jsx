@@ -8,7 +8,7 @@ export default function Plans() {
     {
       name: "1 MONTH",
       duration: "1 Month Coaching",
-      price: "500 EGP",
+      price: "300 EGP",
       features: [
         "Workout Plan",
         "Nutrition Guidance",
@@ -19,7 +19,7 @@ export default function Plans() {
     {
       name: "3 MONTHS",
       duration: "3 Months Coaching",
-      price: "1200 EGP",
+      price: "1000 EGP",
       popular: true,
       features: [
         "Customized Workout Plan",
@@ -32,7 +32,7 @@ export default function Plans() {
     {
       name: "6 MONTHS",
       duration: "6 Months Coaching",
-      price: "2500 EGP",
+      price: "1500 EGP",
       features: [
         "Advanced Coaching",
         "Full Diet Strategy",

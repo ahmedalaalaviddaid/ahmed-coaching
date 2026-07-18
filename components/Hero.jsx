@@ -9,10 +9,26 @@ export default function Hero() {
       className="relative h-screen overflow-hidden"
     >
 
+
       {/* Background */}
-      <img
-        src="/hero.jpg"
+
+      <motion.img
+        src="/newhero.jpg"
         alt="Ahmed Alaa"
+
+        initial={{
+          scale: 1
+        }}
+
+        animate={{
+          scale: 1.05
+        }}
+
+        transition={{
+          duration: 1.5,
+          ease: "easeOut"
+        }}
+
         className="
           absolute
           inset-0
@@ -20,15 +36,27 @@ export default function Hero() {
           h-full
           object-cover
           object-center
+          md:object-right
+           translate-x-36
         "
       />
 
 
+
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+
+      <div
+        className="
+          absolute
+          inset-0
+          bg-black/55
+        "
+      />
+
 
 
       {/* Left Gradient */}
+
       <div
         className="
           absolute
@@ -38,30 +66,39 @@ export default function Hero() {
           md:w-3/4
           bg-gradient-to-r
           from-black
-          via-black/80
+          via-black/75
           to-transparent
         "
-      ></div>
+      />
+            {/* Content */}
 
-
-
-      {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
+      <div
+        className="
+          relative
+          z-10
+          h-full
+          flex
+          items-center
+          pb-20
+        "
+      >
 
 
         <motion.div
+
           initial={{
-            opacity: 0,
-            x: -60
+            opacity:0,
+            x:-80
           }}
 
           animate={{
-            opacity: 1,
-            x: 0
+            opacity:1,
+            x:0
           }}
 
           transition={{
-            duration: 0.8
+            duration:1,
+            ease:"easeOut"
           }}
 
           className="
@@ -72,21 +109,6 @@ export default function Hero() {
             lg:ml-20
           "
         >
-
-
-          <p
-            className="
-              text-orange-500
-              tracking-[5px]
-              font-bold
-              uppercase
-              mb-5
-              text-sm
-              md:text-base
-            "
-          >
-            Online Coaching
-          </p>
 
 
 
@@ -124,19 +146,31 @@ export default function Hero() {
               leading-8
             "
           >
+
             Personalized training.
             <br />
+
             Custom nutrition.
             <br />
+
             Consistent support.
             <br />
+
             Real results.
+
           </p>
 
 
 
 
-          <div className="flex flex-wrap gap-5 mt-10">
+          <div
+            className="
+              flex
+              flex-wrap
+              gap-5
+              mt-10
+            "
+          >
 
 
             <a
@@ -160,24 +194,24 @@ export default function Hero() {
 
 
             <a
-  href="https://wa.me/201068328134"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="
-    border
-    border-white/40
-    px-8
-    py-4
-    rounded-xl
-    font-bold
-    uppercase
-    hover:border-orange-500
-    hover:text-orange-500
-    transition
-  "
->
-  Contact
-           </a>
+              href="https://wa.me/201068328134"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                border
+                border-white/40
+                px-8
+                py-4
+                rounded-xl
+                font-bold
+                uppercase
+                hover:border-orange-500
+                hover:text-orange-500
+                transition
+              "
+            >
+              Contact
+            </a>
 
 
           </div>
@@ -190,7 +224,10 @@ export default function Hero() {
 
 
 
-      {/* Scroll */}
+
+
+      {/* Scroll Indicator */}
+
       <div
         className="
           absolute
@@ -221,13 +258,13 @@ export default function Hero() {
               rounded-full
               mt-2
             "
-          ></div>
-
+          />
 
         </div>
 
 
       </div>
+
 
 
     </section>

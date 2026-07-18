@@ -6,12 +6,15 @@ export default function JoinForm() {
   const [form, setForm] = useState({
     name: "",
     age: "",
+    height: "",
+    weight: "",
+    gender: "",
     phone: "",
     plan: "",
     experience: "",
+    trainingDays: "",
     goal: "",
   });
-
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -19,12 +22,16 @@ export default function JoinForm() {
     const message = `
 🔥 New Coaching Application
 
-Name: ${form.name}
-Age: ${form.age}
-Phone: ${form.phone}
-Plan: ${form.plan}
-Experience: ${form.experience}
-Goal: ${form.goal}
+👤 Name: ${form.name}
+🎂 Age: ${form.age}
+📏 Height: ${form.height} cm
+⚖️ Weight: ${form.weight} kg
+🚻 Gender: ${form.gender}
+📱 Phone: ${form.phone}
+💼 Plan: ${form.plan}
+🏋️ Experience: ${form.experience}
+📅 Training Days: ${form.trainingDays}
+🎯 Goal: ${form.goal}
 `;
 
     window.open(
@@ -34,32 +41,25 @@ Goal: ${form.goal}
     );
   }
 
-
   return (
     <section
       id="join"
       className="bg-zinc-950 text-white py-24"
     >
-
       <div className="max-w-2xl mx-auto px-6">
-
 
         <h2 className="text-5xl font-black text-center uppercase">
           Join My Coaching
         </h2>
 
-
         <p className="text-center text-gray-400 mt-4">
           Fill your information and start your transformation.
         </p>
-
-
 
         <form
           onSubmit={handleSubmit}
           className="mt-12 space-y-7"
         >
-
 
           {/* Name */}
           <div>
@@ -73,8 +73,6 @@ Goal: ${form.goal}
               onChange={(e)=>setForm({...form,name:e.target.value})}
             />
           </div>
-
-
 
           {/* Age */}
           <div>
@@ -90,7 +88,48 @@ Goal: ${form.goal}
             />
           </div>
 
+          {/* Height */}
+          <div>
+            <label className="block mb-2 text-gray-300 font-bold">
+              Height (cm)
+            </label>
 
+            <input
+              type="number"
+              placeholder="Enter your height"
+              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
+              onChange={(e)=>setForm({...form,height:e.target.value})}
+            />
+          </div>
+
+          {/* Weight */}
+          <div>
+            <label className="block mb-2 text-gray-300 font-bold">
+              Weight (kg)
+            </label>
+
+            <input
+              type="number"
+              placeholder="Enter your weight"
+              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
+              onChange={(e)=>setForm({...form,weight:e.target.value})}
+            />
+          </div>
+                    {/* Gender */}
+          <div>
+            <label className="block mb-2 text-gray-300 font-bold">
+              Gender
+            </label>
+
+            <select
+              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
+              onChange={(e)=>setForm({...form,gender:e.target.value})}
+            >
+              <option>Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
 
           {/* Phone */}
           <div>
@@ -105,8 +144,6 @@ Goal: ${form.goal}
             />
           </div>
 
-
-
           {/* Plan */}
           <div>
             <label className="block mb-2 text-gray-300 font-bold">
@@ -117,30 +154,15 @@ Goal: ${form.goal}
               className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
               onChange={(e)=>setForm({...form,plan:e.target.value})}
             >
-
               <option>Select Plan</option>
-
-              <option>
-                1 Month - 500 EGP
-              </option>
-
-              <option>
-                3 Months - 1200 EGP
-              </option>
-
-              <option>
-                6 Months - 2500 EGP
-              </option>
-
+              <option>1 Month - 500 EGP</option>
+              <option>3 Months - 1200 EGP</option>
+              <option>6 Months - 2500 EGP</option>
             </select>
-
           </div>
-
-
 
           {/* Experience */}
           <div>
-
             <label className="block mb-2 text-gray-300 font-bold">
               Training Experience
             </label>
@@ -149,50 +171,56 @@ Goal: ${form.goal}
               className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
               onChange={(e)=>setForm({...form,experience:e.target.value})}
             >
-
-              <option>
-                Select Experience
-              </option>
-
-              <option>
-                Beginner
-              </option>
-
-              <option>
-                Intermediate
-              </option>
-
-              <option>
-                Advanced
-              </option>
-
+              <option>Select Experience</option>
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
             </select>
-
           </div>
 
+          {/* Training Days */}
+          <div>
+            <label className="block mb-2 text-gray-300 font-bold">
+              Training Days Per Week
+            </label>
 
-
+            <select
+              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
+              onChange={(e)=>setForm({...form,trainingDays:e.target.value})}
+            >
+              <option>Select Days</option>
+              <option>2 Days</option>
+              <option>3 Days</option>
+              <option>4 Days</option>
+              <option>5 Days</option>
+              <option>6 Days</option>
+              <option>7 Days</option>
+            </select>
+          </div>
 
           {/* Goal */}
           <div>
-
             <label className="block mb-2 text-gray-300 font-bold">
               Your Goal
             </label>
 
-            <textarea
-              rows={5}
-              placeholder="Example: Build muscle, lose fat, improve physique..."
+            <select
               className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-orange-500 outline-none"
               onChange={(e)=>setForm({...form,goal:e.target.value})}
-            />
-
+            >
+              <option>Select Your Goal</option>
+              <option>💪 Build Muscle</option>
+              <option>🔥 Lose Fat</option>
+              <option>⚖️ Body Recomposition</option>
+              <option>🏋️ Gain Strength</option>
+              <option>🏆 Competition Prep</option>
+              <option>❤️ General Fitness</option>
+              <option>📈 Improve Athletic Performance</option>
+              <option>🎯 Other</option>
+            </select>
           </div>
-
-
-
-
-          <button
+                    <button
+            type="submit"
             className="
               w-full
               bg-orange-500
@@ -209,12 +237,9 @@ Goal: ${form.goal}
             SUBMIT APPLICATION
           </button>
 
-
         </form>
 
-
       </div>
-
     </section>
   );
 }
