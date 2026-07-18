@@ -30,15 +30,14 @@ export default function Hero() {
         }}
 
         className="
-          absolute
-          inset-0
-          w-full
-          h-full
-          object-cover
-          object-center
-          md:object-right
-           translate-x-36
-        "
+  absolute
+  inset-0
+  w-full
+  h-full
+  object-cover
+  object-[75%_center]
+  translate-x-36
+"
       />
 
 
